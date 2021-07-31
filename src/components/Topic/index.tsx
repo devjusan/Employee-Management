@@ -5,7 +5,15 @@ import Stats from "../../assets/stats.svg";
 import Button from "../Button";
 import { useHistory } from "react-router-dom";
 
-const Topic: React.FC = () => {
+type UserProps = {
+  name: string;
+  secundaryName: string;
+  salary: number;
+  birth: string;
+  role: string;
+};
+
+const Topic: React.FC<UserProps> = () => {
   const history = useHistory();
   const getBack = () => history.push("/");
 

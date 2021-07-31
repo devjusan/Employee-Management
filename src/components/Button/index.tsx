@@ -7,13 +7,19 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   marginTop?: string | number;
 }
 
-const Button: React.FC<ButtonProps> = ({ marginTop, width, children }) => {
+const Button: React.FC<ButtonProps> = ({
+  marginTop,
+  width,
+  children,
+  ...rest
+}) => {
   return (
     <S.Container
       style={{
         marginTop: typeof marginTop === "string" ? marginTop : `${marginTop}px`,
         width: typeof width === "string" ? width : `${width}px`,
       }}
+      {...rest}
     >
       {children}
     </S.Container>

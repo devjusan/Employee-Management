@@ -20,8 +20,9 @@ export const SVG = styled.svg`
 
 export const Menu = styled.ul`
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.75rem;
   li {
     text-decoration: none;
     list-style: none;
