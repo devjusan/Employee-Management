@@ -31,7 +31,7 @@ const UserList = () => {
               key={`${key}${item}`}
             >
               {item}
-              <PopUp open={show.position === key}>{item}</PopUp>
+              <PopUp open={show.position === key && show.value}>{item}</PopUp>
             </S.User>
           );
         })}
