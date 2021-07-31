@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.section`
+export const Content = styled.aside`
   padding: 2rem 0;
   gap: 3rem;
   width: 100%;
@@ -27,4 +27,8 @@ export const Title = styled.h1`
   line-height: 75px;
   letter-spacing: -1.13533px;
   color: #11142d;
+`;
+
+export const UserStyle = styled.div`
+  width: 295px;
 `;

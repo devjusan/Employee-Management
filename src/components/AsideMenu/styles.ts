@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.aside`
+export const Wrapper = styled.nav`
   width: 135.1px;
   height: 100%;
   background: #1f95ee;
@@ -19,6 +19,13 @@ export const SVG = styled.svg`
 `;
 
 export const Menu = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  li {
+    text-decoration: none;
+    list-style: none;
+  }
   img {
     cursor: pointer;
   }
