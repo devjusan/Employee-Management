@@ -1,6 +1,6 @@
 import AsideMenu from "../AsideMenu";
 import * as S from "./styles";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Topic from "../Topic";
 import NewUser from "../../pages/NewUser";
 
@@ -9,10 +9,10 @@ const Main: React.FC = () => (
     <Router>
       <AsideMenu />
       <Switch>
-        <Route exact path="/adicionar">
+        <Route exact path="/">
           <Topic />
         </Route>
-        <Route path="/">
+        <Route path="/adicionar">
           <NewUser />
         </Route>
       </Switch>

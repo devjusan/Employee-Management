@@ -18,6 +18,14 @@ export const Wrapper = styled.section`
   }
 `;
 
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 95%;
+`;
+
 export const Title = styled.h1`
   text-align: center;
   font-style: normal;

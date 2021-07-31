@@ -1,6 +1,7 @@
 import React from "react";
 import Formatter from "../../utils/formatMoney";
 import * as S from "./styles";
+
 type UserProps = {
   name: string;
   secundaryName: string;
