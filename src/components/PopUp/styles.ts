@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 100%;
+  white-space: nowrap;
   background-color: #622ee5;
   color: #ccc;
-  text-align: center;
   border-radius: 6px;
   font-size: 15px;
   padding: 15px 10px;
@@ -15,7 +17,8 @@ export const Wrapper = styled.div`
   bottom: 125%;
   left: 50%;
   margin-left: 5px;
-  margin-bottom: 0px;
+  margin-bottom: -5px;
+  cursor: pointer;
 
   .popup-cloud {
     background-color: #fff;
@@ -24,7 +27,7 @@ export const Wrapper = styled.div`
     width: 12px;
     height: 20px;
     transform: rotate(45deg);
-    bottom: -0.75rem;
+    bottom: -0.7rem;
     left: 1.5rem;
     background-color: #622ee5;
   }

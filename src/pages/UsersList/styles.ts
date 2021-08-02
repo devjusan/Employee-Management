@@ -21,6 +21,9 @@ export const Wrapper = styled.section`
 export const Content = styled.div``;
 
 export const User = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   text-align: center;
   font-style: normal;
@@ -30,7 +33,6 @@ export const User = styled.p`
   margin: 0.8rem;
   letter-spacing: -1.13533px;
   color: #11142d;
-  cursor: pointer;
 `;
 
 export const Title = styled.h1`

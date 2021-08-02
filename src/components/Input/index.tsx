@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   value: string;
-  inputError: boolean;
+  inputError: { value: boolean; message: string };
   name: string;
   onChange: (arg: never) => any;
 }
@@ -36,7 +36,7 @@ const Input: React.FC<InputProps> = ({
         onChange={onChange}
         value={value}
       />
-      <S.Error>{error ? "Campo obrigatório" : ""}</S.Error>
+      <S.Error>{error.value ? error.message : ""}</S.Error>
     </S.Container>
   );
 };

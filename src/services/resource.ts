@@ -1,6 +1,4 @@
-import axios from "axios";
-const BASE_URL =
-  "https://crudcrud.com/api/1cb14ff361684e05af16999e809c1675/data";
+import { api } from "./api";
 
 interface ICreateUser {
   birth: string;
@@ -11,11 +9,19 @@ interface ICreateUser {
 }
 
 const createUser = async (data: ICreateUser) => {
-  return await axios.post(BASE_URL, data);
+  const response = await api.post("", data);
+  return response;
 };
 
 const getUsers = async () => {
-  return await axios.get(BASE_URL);
+  return api.get("").then((response) => response);
 };
 
-export default { createUser, getUsers };
+const deleteUser = async (id: string) => {
+  return await api.delete(`/${id}`).then((response) => response);
+};
+
+const getSpecificUser = async (id: string) => {
+  return api.get(`/${id}`).then((response) => response);
+};
+export default { createUser, getUsers, deleteUser, getSpecificUser };

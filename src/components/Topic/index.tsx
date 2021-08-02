@@ -13,7 +13,13 @@ type UserProps = {
   role: string;
 };
 
-const Topic: React.FC<UserProps> = () => {
+const Topic: React.FC<UserProps> = ({
+  birth,
+  name,
+  role,
+  salary,
+  secundaryName,
+}) => {
   const history = useHistory();
   const getBack = () => history.push("/");
 
@@ -23,11 +29,11 @@ const Topic: React.FC<UserProps> = () => {
       <S.UserStyle>
         {" "}
         <User
-          birth="02/16/1998"
-          name="Valmir"
-          secundaryName="Batista"
-          role="Programador"
-          salary={3000}
+          birth={birth}
+          name={name}
+          secundaryName={secundaryName}
+          role={role}
+          salary={salary}
         />
         <img src={Stats} alt="Homem mostrando dados estatísticos" />
       </S.UserStyle>
