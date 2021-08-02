@@ -1,6 +1,6 @@
 # Gerenciador de Funcionário
 Aplicativo feito em React.JS para a administração de dados de usuários
-[Site do projeto](gest.netlify.app)
+[Site](gest.netlify.app)
 ## Iniciando
 Primeiro, inicie o servidor de desenvolvimento
 
