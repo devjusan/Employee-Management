@@ -3,6 +3,7 @@ import * as S from "./styles";
 import { useHistory } from "react-router-dom";
 import Button from "../../components/Button";
 import PopUp from "../../components/PopUp";
+import resource from "../../services/resource";
 
 const UserList = () => {
   const history = useHistory();
@@ -16,8 +17,16 @@ const UserList = () => {
 
   const handlePopUp = (position: number, value: boolean) => {
     setShow({ position, value });
-    console.log(show);
   };
+
+  const getUsers = async () => {
+    const { data } = await resource.getUsers();
+    return data;
+  };
+
+  React.useEffect(() => {
+    console.log(getUsers());
+  }, []);
 
   return (
     <S.Wrapper>
