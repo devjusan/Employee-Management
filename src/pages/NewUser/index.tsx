@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import Button from "../../components/Button";
@@ -73,6 +74,10 @@ const NewUser: React.FC = () => {
     }
   };
 
+  React.useEffect(() => {
+    verifyForm(form);
+  }, [form]);
+
   return (
     <S.Wrapper>
       <S.Title>Adicionar</S.Title>
@@ -106,10 +111,16 @@ const NewUser: React.FC = () => {
           value={form.birth ?? ""}
           name="dd/mm/yy"
           maxLength={10}
-          inputError={{
-            value: errors.birth,
-            message: "Campo obrigatório",
-          }}
+          inputError={
+            form.birth.match(
+              /^(0?[1-9]|[12][0-9]|3[01])[/-](0?[1-9]|1[012])[/-]\d{4}$/
+            )
+              ? {
+                  value: errors.birth,
+                  message: "Campo obrigatório",
+                }
+              : { value: true, message: "Data inválida" }
+          }
         />
         <Input
           onChange={(option) => handleForm("salary", option)}

@@ -24,7 +24,7 @@ const User: React.FC<UserProps> = ({
       </S.Name>
       <S.SmallContainer>
         <S.Salary>Salário: {Formatter(salary)}</S.Salary>
-        <S.Birth>Nascimento {birth}</S.Birth>
+        <S.Birth>Nascimento: {birth}</S.Birth>
       </S.SmallContainer>
       <S.Role>{role}</S.Role>
     </S.Wrapper>
