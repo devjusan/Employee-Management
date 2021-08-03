@@ -7,9 +7,7 @@ Primeiro, inicie o servidor de desenvolvimento
 
 ```
 
-# npm run dev
-     or
-# yarn dev
+# npm start
 
 ```
 
