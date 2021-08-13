@@ -26,7 +26,4 @@ No projeto foi utilizado as seguintes ferramentas:
 - [CommitLint](https://commitlint.js.org/#/)
 
 # API Utilizada
-Utilizei [CrudCrud](https://crudcrud.com/) para desenvolver a API do aplicativo. Como meu foco, em toda a minha carreira, é no Front-End o meu conhecimento em Back-End não é o suficiente para criar uma API.
-
-# Por que não foi utilizado Redux?
-Redux é uma biblioteca que, como qualquer outra, consome um espaço no projeto que deve ser utilizado da melhor forma possível. Pessoalmente, não vi a necessidade de utilizá-lo em nenhuma parte do código apesar de ter domínio sobre a ferramenta.
+Utilizei [CrudCrud](https://crudcrud.com/) para desenvolver a API do aplicativo.
